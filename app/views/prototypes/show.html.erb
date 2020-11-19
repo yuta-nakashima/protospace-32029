@@ -4,7 +4,7 @@
       <p class="prototype__hedding">
         <%= @prototype.catch_copy%>
       </p>
-        <%= link_to "by プロトタイプの投稿者", "/users/#{@prototype.id}", class: :prototype__user %>
+        <%= link_to "by プロトタイプの投稿者", "/users/#{@prototype.user.id}", class: :prototype__user %>
       <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
         <% if user_signed_in? && @prototype.user_id == current_user.id %>
           <div class="prototype__manage">
