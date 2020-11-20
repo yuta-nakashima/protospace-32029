@@ -29,7 +29,7 @@ class PrototypesController < ApplicationController
     if  @prototype.user.id == current_user.id
       render :edit
     else
-      redirect_to prototype_path
+      redirect_to root_path
     end
   end
 
